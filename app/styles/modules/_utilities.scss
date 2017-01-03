@@ -1,0 +1,74 @@
+//
+// Modules -> Utility classes
+// --------------------------------------------------
+
+//
+// close btn
+//
+.close {
+  float: right;
+  font-size: ($base-font-size * 1.1764);
+  font-weight: $close-font-weight;
+  line-height: 1;
+  color: $close-color;
+  text-shadow: $close-text-shadow;
+  @include opacity(1);
+
+  &:hover,
+  &:focus {
+    color: $close-color;
+    text-decoration: none;
+    cursor: pointer;
+    @include opacity(.5);
+  }
+}
+button.close {
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+}
+
+
+.center-block {
+  @include center-block;
+}
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}
+
+@if $use-adaptive == true and $use-flexbox == false {
+  @media screen and (min-width: $screen-sm-min) {
+    .pull__sm-left   { float: left; }
+    .pull__sm-right  { float: right; }
+  }
+  @media screen and (min-width: $screen-md-min) {
+    .pull__md-left   { float: left; }
+    .pull__md-right  { float: right; }
+  }
+  @media screen and (min-width: $screen-lg-min) {
+    .pull__lg-left   { float: left; }
+    .pull__lg-right  { float: right; }
+  }
+  @media screen and (min-width: $screen-xl-min) {
+    .pull__xl-left   { float: left; }
+    .pull__xl-right  { float: right; }
+  }
+}
+
+.hide {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+.invisible {
+  visibility: hidden;
+}
+.text-hide {
+  @include text-hide;
+}

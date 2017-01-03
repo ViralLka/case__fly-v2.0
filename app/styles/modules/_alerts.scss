@@ -1,0 +1,49 @@
+//
+// Modules -> Breadcrumbs
+// --------------------------------------------------
+
+@if $use-alerts == true {
+
+  .alert {
+    padding: $alert-padding;
+    margin-bottom: $line-height-computed;
+    border: 1px solid transparent;
+    border-radius: $alert-border-radius;
+    font-size: 15px;
+    background-repeat: no-repeat;
+    background-position: center left 16px;
+
+    &--success {
+      @include alert-variant($alert-success-bg, $alert-success-border, $alert-success-text);
+      background-image: url("../images/icons/icoAlertSuccess.png");
+      .close {
+        color: $alert-success-text;
+      }
+    }
+
+    &--info {
+      @include alert-variant($alert-info-bg, $alert-info-border, $alert-info-text);
+      background-image: url("../images/icons/icoAlertInfo.png");
+      .close {
+        color: $alert-info-text;
+      }
+    }
+
+    &--warning {
+      @include alert-variant($alert-warning-bg, $alert-warning-border, $alert-warning-text);
+      background-image: url("../images/icons/icoAlertWarning.png");
+      .close {
+        color: $alert-warning-text;
+      }
+    }
+
+    &--danger {
+      @include alert-variant($alert-danger-bg, $alert-danger-border, $alert-danger-text);
+      background-image: url("../images/icons/icoAlertDanger.png");
+      .close {
+        color: $alert-danger-text;
+      }
+    }
+  }
+
+}

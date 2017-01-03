@@ -1,0 +1,161 @@
+//
+// Modules -> Navs
+// --------------------------------------------------
+
+.nav {
+  float: right;
+
+  &__justified {
+    width: 100%;
+
+    li {
+      float: none;
+      > a {
+        text-align: center;
+        margin-bottom: 5px;
+      }
+    }
+    @media screen and (min-width: $screen-adaptive-nav) {
+      li {
+        display: table-cell;
+        width: 1%;
+        > a {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &__fixed-top {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    border-width: 0 0 1px;
+    z-index: $zindex-navbar-fixed;
+  }
+}
+
+
+.sub-nav {
+  text-align: center;
+  li {
+    display: block;
+    a:hover {
+      background: $subnav-link-hover-bg;
+    }
+  }
+  @media screen and (min-width: $screen-adaptive-nav) {
+    display: none;
+    position: absolute;
+    background: $gray-darken;
+    top: 100%;
+    right: 0;
+    min-width: 200px;
+    li:hover & {
+      display: block;
+    }
+  }
+}
+
+.main-nav {
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  @include clearfix;
+
+  &__item {
+    position: relative;
+    display: block;
+
+    @media screen and (min-width: $screen-adaptive-nav) {
+      display: inline-block;
+    }
+  }
+  &__link {
+    position: relative;
+    padding: $nav-link-padding;
+    text-decoration: none;
+    display: block;
+    background-color: $color-type-3c;
+    @media screen and (min-width: $screen-adaptive-nav) {
+      background-color: transparent;
+    }
+    &:hover, &:focus {
+      text-decoration: underline;
+    }
+  }
+  img {
+    max-width: none;
+  }
+
+  &__toggle {
+    position: relative;
+    float: right;
+    padding: 9px 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    &:focus {
+      outline: 0;
+    }
+    .icon-bar {
+      display: block;
+      width: 30px;
+      height: 2px;
+      background: #000;
+      border-radius: 1px;
+    }
+    .icon-bar + .icon-bar {
+      margin-top: 4px;
+    }
+    @media screen and (min-width: $screen-adaptive-nav) {
+      display: none;
+    }
+  }
+  &__collapse {
+    overflow-x: visible;
+    border-top: 1px solid transparent;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
+    @include clearfix;
+    -webkit-overflow-scrolling: touch;
+    clear: left;
+    display: none;
+
+    &.in {
+      overflow-y: auto;
+    }
+
+    @media screen and (min-width: $screen-adaptive-nav) {
+      display: block !important;
+      width: auto;
+      border-top: 0;
+      box-shadow: none;
+
+      &.collapse {
+        display: block !important;
+        height: auto !important;
+        padding-bottom: 0;
+        overflow: visible !important;
+      }
+
+      &.in {
+        overflow-y: visible;
+      }
+    }
+  }
+}
+
+.navbar {
+  position: relative;
+  @include clearfix();
+  @media screen and (min-width: $screen-adaptive-nav) {
+    &__left {
+      float: left;
+    }
+    &__right {
+      float: right;
+    }
+  }
+}

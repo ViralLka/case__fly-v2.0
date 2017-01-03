@@ -1,0 +1,17 @@
+extends layouts/_default
+
+block title
+    title Case__fly
+    - var title = 'Main'
+
+block pageName
+    -var pageName = "index"
+
+block siteHeader
+    include partials/_header
+
+block siteMain
+    include pages/_main
+
+block siteFooter
+    include partials/_footer

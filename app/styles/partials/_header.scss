@@ -1,0 +1,42 @@
+//
+// Partials -> Header
+// ------------------------------------
+
+
+//
+// Header
+//
+.page-header {
+  border-bottom: 1px solid $base-color-darken;
+  @include clearfix();
+  &__logo {
+    float: left;
+    a {text-decoration: none;}
+    img {
+      vertical-align: middle;
+      max-width: 60px;
+    }
+    span {
+      vertical-align: middle;
+      margin-left: 10px;
+    }
+  }
+}
+.main-nav {
+  margin-top: 8px;
+  float: right;
+}
+
+//
+// Main title
+//
+.title { }
+
+
+//
+// old-browser
+//
+.browsehappy {
+  @extend .container;
+}
+.lt-ie8 { }

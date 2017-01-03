@@ -1,0 +1,243 @@
+//
+// Modules -> Grid
+// --------------------------------------------------
+
+// Container widths
+.container {
+  @include container;
+}
+
+
+// Fluid container
+
+@if $use-flexbox == true {
+  // Row
+  .row {
+    @include make-row;
+    &.reverse {
+      flex-direction: row-reverse;
+    }
+  }
+  .cell.reverse {
+    flex-direction: column-reverse;
+  }
+} @else {
+  .row {
+    @include make-row;
+  }
+}
+
+  // Columns
+  .cell {
+    @include make-column;
+  }
+
+  // Extra small grid
+  @include make-grid(xs);
+
+  @mixin justify-content__xs($value){
+    justify-content: $value;
+  }
+  @mixin align-items__xs($value){
+    align-items: $value;
+  }
+  @mixin align-content__xs($value){
+    align-content: $value;
+  }
+  @mixin align-self__xs($value){
+    align-self: $value;
+  }
+  @mixin order__xs($value){
+    order: $value;
+  }
+  @mixin flex__xs($value){
+    flex: $value;
+  }
+  @mixin flex-grow__xs($value){
+    flex-grow: $value;
+  }
+  @mixin flex-shrink__xs($value){
+    flex-shrink: $value;
+  }
+  @mixin flex-basis__xs($value){
+    flex-basis: $value;
+  }
+  @mixin flex-direction__xs($value){
+    flex-direction: $value;
+  }
+  @mixin flex-wrap__xs($value){
+    flex-wrap: $value;
+  }
+  @mixin flex-flow__xs($value){
+    flex-flow: $value;
+  }
+
+@if $use-adaptive == true {
+  // Small grid
+  @media screen and (min-width: $screen-sm-min) {
+    @include make-grid(sm);
+
+    @mixin justify-content__sm($value){
+      justify-content: $value;
+    }
+    @mixin align-items__sm($value){
+      align-items: $value;
+    }
+    @mixin align-content__sm($value){
+      align-content: $value;
+    }
+    @mixin align-self__sm($value){
+      align-self: $value;
+    }
+    @mixin order__sm($value){
+      order: $value;
+    }
+    @mixin flex__sm($value){
+      flex: $value;
+    }
+    @mixin flex-grow__sm($value){
+      flex-grow: $value;
+    }
+    @mixin flex-shrink__sm($value){
+      flex-shrink: $value;
+    }
+    @mixin flex-basis__sm($value){
+      flex-basis: $value;
+    }
+    @mixin flex-direction__sm($value){
+      flex-direction: $value;
+    }
+    @mixin flex-wrap__sm($value){
+      flex-wrap: $value;
+    }
+    @mixin flex-flow__sm($value){
+      flex-flow: $value;
+    }
+  }
+
+  // Medium grid
+  @media screen and (min-width: $screen-md-min) {
+    @include make-grid(md);
+
+    @mixin justify-content__md($value){
+      justify-content: $value;
+    }
+    @mixin align-items__md($value){
+      align-items: $value;
+    }
+    @mixin align-content__md($value){
+      align-content: $value;
+    }
+    @mixin align-self__md($value){
+      align-self: $value;
+    }
+    @mixin order__md($value){
+      order: $value;
+    }
+    @mixin flex__md($value){
+      flex: $value;
+    }
+    @mixin flex-grow__md($value){
+      flex-grow: $value;
+    }
+    @mixin flex-shrink__md($value){
+      flex-shrink: $value;
+    }
+    @mixin flex-basis__md($value){
+      flex-basis: $value;
+    }
+    @mixin flex-direction__md($value){
+      flex-direction: $value;
+    }
+    @mixin flex-wrap__md($value){
+      flex-wrap: $value;
+    }
+    @mixin flex-flow__md($value){
+      flex-flow: $value;
+    }
+  }
+
+  // Large grid
+  @media screen and (min-width: $screen-lg-min) {
+    @include make-grid(lg);
+
+    @mixin justify-content__lg($value){
+      justify-content: $value;
+    }
+    @mixin align-items__lg($value){
+      align-items: $value;
+    }
+    @mixin align-content__lg($value){
+      align-content: $value;
+    }
+    @mixin align-self__lg($value){
+      align-self: $value;
+    }
+    @mixin order__lg($value){
+      order: $value;
+    }
+    @mixin flex__lg($value){
+      flex: $value;
+    }
+    @mixin flex-grow__lg($value){
+      flex-grow: $value;
+    }
+    @mixin flex-shrink__lg($value){
+      flex-shrink: $value;
+    }
+    @mixin flex-basis__lg($value){
+      flex-basis: $value;
+    }
+    @mixin flex-direction__lg($value){
+      flex-direction: $value;
+    }
+    @mixin flex-wrap__lg($value){
+      flex-wrap: $value;
+    }
+    @mixin flex-flow__lg($value){
+      flex-flow: $value;
+    }
+  }
+
+  // XLarge grid
+  @media screen and (min-width: $screen-xl-min) {
+    @include make-grid(xl);
+
+    @mixin justify-content__xl($value){
+      justify-content: $value;
+    }
+    @mixin align-items__xl($value){
+      align-items: $value;
+    }
+    @mixin align-content__xl($value){
+      align-content: $value;
+    }
+    @mixin align-self__xl($value){
+      align-self: $value;
+    }
+    @mixin order__xl($value){
+      order: $value;
+    }
+    @mixin flex__xl($value){
+      flex: $value;
+    }
+    @mixin flex-grow__xl($value){
+      flex-grow: $value;
+    }
+    @mixin flex-shrink__xl($value){
+      flex-shrink: $value;
+    }
+    @mixin flex-basis__xl($value){
+      flex-basis: $value;
+    }
+    @mixin flex-direction__xl($value){
+      flex-direction: $value;
+    }
+    @mixin flex-wrap__xl($value){
+      flex-wrap: $value;
+    }
+    @mixin flex-flow__xl($value){
+      flex-flow: $value;
+    }
+  }
+}
