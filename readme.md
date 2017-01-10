@@ -5,7 +5,7 @@
 ## How to install
 
 Prerequisites:
-* [Node.js](http://nodejs.org/) 
+* [Node.js](http://nodejs.org/) (ver. 5.12.0)
 * [Bower](http://bower.io/) 
 
 Installation process:
