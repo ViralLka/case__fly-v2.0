@@ -1,6 +1,6 @@
 # Case__fly
 
-> It's a basic template using pug/scss/gulp/bower/svg
+> It's a front-end template using pug/scss/gulp/bower/svg-sprites
 
 ## How to install
 
