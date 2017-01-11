@@ -1,6 +1,6 @@
 # Case__fly
 
-> It's a basic template using pug/scss/gulp/bower
+> It's a basic template using pug/scss/gulp/bower/svg
 
 ## How to install
 
@@ -15,6 +15,10 @@ Installation process:
 3. Run ```bower i``` to install front-end dependencies
 
 ## Usage
+
+```
+Use folder app/sprites/ to build svg-sprites
+```
 
 For project development with livereload run:
 ```

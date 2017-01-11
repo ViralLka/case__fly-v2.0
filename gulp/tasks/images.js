@@ -24,6 +24,6 @@ gulp.task('copySvg', 'Copy SVGs to `dist/`', function () {
 
 gulp.task('images', 'Run Imagemin optimalizations and copy to `dist/`', ['copySvg'], function () {
   return gulp.src(config.images.src)
-    .pipe(gulpif(config.optimizeImages, cache(imagemin(config.images.cfg))))
+    .pipe(gulpif(config.optimizeImages, imagemin(config.images.cfg)))
     .pipe(gulp.dest(config.images.dest));
 });

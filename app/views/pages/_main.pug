@@ -6,6 +6,7 @@ main.page-main
             h2 H2: 1000+ Elements
             p Haven't you learned anything from that guy who gives those sermons at church? Captain Whatshisname? We live in a society of laws! Why do you think I took you to all those Police Academy movies? For fun? Well, I didn't hear anybody laughing, did you? Except at that guy who made sound effects.
             blockquote
+                i.f-icons.f-icons--facebook
                 p Books are useless! I only ever read one book, "To Kill A Mockingbird," and it gave me absolutely no insight on how to kill mockingbirds!
             p Makes sound effects and laughs. Where was I? Oh yeah! Stay out of my booze. #[br] Weaseling out of things is important to learn. It's what separates us from the animals…except the weasel. Weaseling out of things is important to learn.
             p Some #[b text] continue....
@@ -34,7 +35,7 @@ main.page-main
             h4 Photo Gallery
             .carousel-item
                 - for (var x = 1; x < 11; x++)
-                    a: img(src="images/slider/imgCarousel-#{x}.jpg" alt="")
+                    a: img(src="images/slider/imgCarousel-" + x + ".jpg" alt="")
         section.text-template
             h5 H5: Fully Customizable
             p You, minion. Lift my arm. AFTER HIM! It's just like the story of the grasshopper and the octopus. All year long, the grasshopper kept burying acorns for winter, while the octopus mooched off his girlfriend and watched TV.

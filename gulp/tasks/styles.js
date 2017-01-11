@@ -7,10 +7,10 @@ var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var postcss = require('gulp-postcss');
 var plumber = require('gulp-plumber');
-var replace = require('gulp-replace');
 var csscomb = require('gulp-csscomb');
 var sassGlob = require('gulp-sass-glob');
 var gcmq = require('gulp-group-css-media-queries');
+var gulpif = require('gulp-if');
 
 var autoprefixer = require('autoprefixer');
 
@@ -30,7 +30,7 @@ gulp.task('styles', 'Compile Sass to CSS', function () {
       autoprefixer(config.styles.autoprefixerCfg)
     ]))
     .pipe(gcmq())
-    // .pipe(csscomb())
+    .pipe(gulpif(config.optimizeCss, csscomb()))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(config.styles.dest))
     .pipe(reload({stream:true}));

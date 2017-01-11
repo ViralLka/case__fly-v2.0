@@ -11,6 +11,7 @@ var uglify = require('gulp-uglify');
 var minifyCss = require('gulp-clean-css');
 var gulpif = require('gulp-if');
 var filter = require('gulp-filter');
+var rename = require('gulp-rename');
 
 var config = require('./../config.js');
 var handleError = require('./../utils/handleError.js');
@@ -53,7 +54,9 @@ gulp.task('useref', 'Bundle CSS and JS based on build tags and copy to `dist/` f
     return gulp.src(config.useref.src)
       .pipe(assets)
       .pipe(gulpif('*.js', gulpif(config.uglifyJs, uglify()))) // uglify JS
+      .pipe(gulpif('*.js', gulpif(config.uglifyJs, rename({suffix: '.min'})))) // rename JS
       .pipe(gulpif('*.css', gulpif(config.minifyCss, minifyCss()))) // minify CSS
+      .pipe(gulpif('*.css', gulpif(config.minifyCss, rename({suffix: '.min'})))) // rename CSS
       .pipe(assets.restore())
       .pipe(useref())
       .pipe(pugFilesOnly)

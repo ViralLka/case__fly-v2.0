@@ -2,6 +2,17 @@
 // Vendors -> Plugins
 // ------------------------------------
 
+//svg-icons
+.f-icons {
+  display: inline-block;
+  &:before {
+    content: '';
+  }
+  &--facebook {
+    &:before {@include sprite(facebook);}
+  }
+}
+//svg-icons
 
 // slider
 .slick-slide {

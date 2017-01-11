@@ -3,10 +3,11 @@ var path = require('path');
 var modRewrite = require('connect-modrewrite');
 
 // Default settings
-module.exports.uglifyJs = process.env.UGLIFYJS || false; // to remove .min sufix edit template manually
-module.exports.minifyCss = process.env.MINIFYCSS || false; // to remove .min sufix edit template manually
+module.exports.uglifyJs = process.env.UGLIFYJS || false;
+module.exports.minifyCss = process.env.MINIFYCSS || false;
 module.exports.cacheBust = process.env.CACHEBUST || false;
 module.exports.optimizeImages = process.env.OPTIMIZEIMAGES || true;
+module.exports.optimizeCss = process.env.OPTIMIZECSS || false;
 module.exports.lintJs = process.env.LINTJS || false;
 
 // Default paths
@@ -19,6 +20,7 @@ var bowerDir = 'bower_components';
 var data = 'data';
 var fonts = 'fonts';
 var images = 'images';
+var sprites = 'sprites';
 var scripts = 'scripts';
 var styles = 'styles';
 var views = 'views';
@@ -114,6 +116,14 @@ module.exports.copyExtras = {
 };
 
 // Images task config
+module.exports.sprites = {
+  src: path.join(app, sprites, '/*'),
+  svg: path.join(images, '/svg/sprite.svg'),
+  dest: path.join(app, '/')
+};
+
+
+// Images task config
 module.exports.images = {
   src: path.join(app, images, '**/*.{gif,png,jpg}'),
   srcSVG: path.join(app, images, '**/*.svg'),
@@ -144,12 +154,11 @@ module.exports.styles = {
   src: path.join(app, styles, '*.scss'),
   dest: path.join(tmp,styles),
   sassCfg: {}, 
-  autoprefixerCfg: {browsers: ['> 0.01%', 'IE 7']}
+  autoprefixerCfg: {browsers: ['> 0.01%', 'IE 9']}
 };
 
 // Templates task config
 module.exports.templates = {
-  
   src: path.join(app, views, '*.pug'),
   srcBuild: path.join(tmp, 'pug/*.pug'),
   dest: tmp,
@@ -180,6 +189,7 @@ module.exports.useref = {
 
 // Watch task config
 module.exports.watch = {
+  sprites: path.join(app, sprites, '/*'),
   styles: path.join(app, styles, '/**/*.scss'),
   pug: [
     path.join(app, views, '/**/*.pug'), 
@@ -208,4 +218,4 @@ module.exports.wiredep = {
       overides: {}
     }
   } 
-}
+};
