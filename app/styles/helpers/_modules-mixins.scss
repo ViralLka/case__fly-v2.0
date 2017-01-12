@@ -24,22 +24,6 @@
 }
 
 //
-// alert
-//
-@mixin alert-variant($background, $border, $text-color) {
-  background-color: $background;
-  border-color: $border;
-  color: $text-color;
-  hr {
-    border-top-color: darken($border, 5%);
-  }
-  .alert--link {
-    color: darken($text-color, 10%);
-  }
-}
-
-
-//
 // padding / margin
 //
 @mixin padtop($top) {
@@ -63,12 +47,19 @@
 // responsive utilities
 //
 @mixin responsive-visibility($parent) {
-  #{$parent} {
-    display: block !important;
+
+  @if $use-flexbox == true {
+    #{$parent} {
+      display: block;
+    }
+  } @else {
+    #{$parent} {
+      display: flex;
+    }
   }
 }
 @mixin responsive-invisibility($parent) {
   #{$parent} {
-    display: none !important;
+    display: none;
   }
 }

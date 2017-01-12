@@ -2,6 +2,11 @@
 // Partials -> Main
 // ------------------------------------
 
+@if $use-adaptive == false {
+  header, main, footer {
+    min-width: $container-xl;
+  }
+}
 
 //
 // Main container
