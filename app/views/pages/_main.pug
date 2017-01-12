@@ -165,21 +165,4 @@ main.page-main
                         .form__group
                             +fieldRadio('Radio Button', 'item11', 'radio', false)
                             +fieldRadio('Radio Button Selected', 'item12', 'radio', true)
-            .alertBlock
-                h5 Notifications
-                .row
-                    .cell.cell__lg-6.cell__xs-12
-                        .alert.alert--success
-                            button.close(type='button', data-dismiss='alert', aria-hidden='true') &times;
-                            | Success!
-                        .alert.alert--warning
-                            button.close(type='button', data-dismiss='alert', aria-hidden='true') &times;
-                            | Warning!
-                    .cell.cell__lg-6.cell__xs-12
-                        .alert.alert--danger
-                            button.close(type='button', data-dismiss='alert', aria-hidden='true') &times;
-                            | Error!
-                        .alert.alert--info
-                            button.close(type='button', data-dismiss='alert', aria-hidden='true') &times;
-                            | Info.
             include ../components/_paginator
