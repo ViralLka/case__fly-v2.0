@@ -14,7 +14,7 @@ gulp.task('sprites', function () {
             },
             mode: {
                 css: {
-                    // dest: "./",
+                    dest: "./",
                     layout: "horizontal",
                     sprite: config.sprites.svg,
                     bust: false,
