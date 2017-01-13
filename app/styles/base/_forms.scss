@@ -97,7 +97,7 @@ select.control {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-
+  padding-right: 30px;
   background: url("../images/icons/arrow-down.png") no-repeat center right 10px, $input-bg;
   &:focus {
     background: url("../images/icons/arrow-up.png") no-repeat center right 10px, $input-bg;
