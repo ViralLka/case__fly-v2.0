@@ -19,12 +19,12 @@ mixin menu(items)
 //- form-input
 mixin fieldInput(type, name, id, label, placeholder, data, required)
     label(for=id)= label
-    input.form-control(type=type, name=name, id=id, placeholder=placeholder, data-label=data, required=required)
+    input.control(type=type, name=name, id=id, placeholder=placeholder, data-label=data, required=required)
 
 //- form-textarea
 mixin fieldTextarea(name, id, label, placeholder, rows, data, required)
     label(for=id)= label
-    textarea.form-control(name=name, id=id, placeholder=placeholder, rows=rows,  data-label=data, required=required)
+    textarea.control(name=name, id=id, placeholder=placeholder, rows=rows,  data-label=data, required=required)
 
 //- form-checkbox
 mixin fieldCheckbox(name, id, checked)

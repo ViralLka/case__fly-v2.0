@@ -11,7 +11,7 @@ main.page-main
             p Makes sound effects and laughs. Where was I? Oh yeah! Stay out of my booze. #[br] Weaseling out of things is important to learn. It's what separates us from the animals…except the weasel. Weaseling out of things is important to learn.
             p Some #[b text] continue....
             .row
-                .cell.cell__lg-6
+                .cell.cell__xs-6
                     h3 H3: Super Useful
                     p I hope this has taught you kids a lesson: kids never learn. Can't you people take the law into your own hands? I mean, we can't be policing the entire city:
                     ul.list--bullet
@@ -21,7 +21,7 @@ main.page-main
                         li That's the ONLY thing about being a slave.
                         li You don't know how to do any of those.
                     p Yes, except the Dave Matthews Band doesn't rock. There's one way and only one way to determine if an animal is intelligent. Dissect its brain! It's just like the story of the grasshopper and the octopus.
-                .cell.cell__lg-6
+                .cell.cell__xs-6
                     h4 H4: Light &amp; Dark Theme
                     p Guards! Bring me the forms I need to fill out to have her taken away! Leela, Bender, we're going grave robbing. Oh right. I forgot about the battle:
                     ol.list--number
@@ -141,16 +141,16 @@ main.page-main
                     .cell.cell__sm-3
                         h5 Ghost Buttons
                         ul.list--unstyled
-                            li: a.btn.btn--transparent(href='#') Normal
-                            li.margtop20: a.btn.btn--transparent(href='#') Hover
-                            li.margtop20: a.btn.btn--transparent.active(href='#') Pressed
+                            li: a.btn.btn--outlined(href='#') Normal
+                            li.margtop20: a.btn.btn--outlined(href='#') Hover
+                            li.margtop20: a.btn.btn--outlined.active(href='#') Pressed
                     .cell.cell__sm-4
                         h5 Inputs
                         .form__group
                             +fieldInput('text', 'name', 'name', '', 'Grade  Kit', 'Grade  Kit', false)
                         h5 Dropdowns
                         .form__group
-                            select.form-control
+                            select.control
                                 option Dropdown
                                 option Dropdown Hover
                                 option Dropdown Selected

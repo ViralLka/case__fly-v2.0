@@ -12,7 +12,6 @@
   text-decoration: none;
   background-image: none;
   border: 1px solid transparent;
-  margin-bottom: 0;
   @include button-size($padding-base-vertical, $padding-base-horizontal, $base-font-size, $base-line-height, $btn-border-radius-base);
 
   min-width: 160px;
@@ -44,8 +43,7 @@
 
   // Button with icon
   &__icon {
-    padding: 0;
-    width: $base-padding * 4;
+    position: relative;
   }
   &__icon--left {
     padding-left: $base-padding * 2;
@@ -55,7 +53,7 @@
       left: $base-padding;
     }
   }
-  &__icon-right {
+  &__icon--right {
     padding-left: $base-padding * 2;
     .icon {
       position: absolute;
@@ -85,8 +83,8 @@
     &--danger {
       @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
     }
-    &--transparent {
-      @include button-variant-tr($btn-transparent-color, $btn-transparent-bg, $btn-transparent-border);
+    &--outlined {
+      @include button-variant-tr($btn-outlined-color, $btn-outlined-bg, $btn-outlined-border);
 
     }
   }
@@ -106,7 +104,6 @@
       height: 35px;
     }
   }
-
 
   &--round {
     @include border-radius(50px);

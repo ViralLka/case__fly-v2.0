@@ -24,7 +24,7 @@ legend {
 label {
   display: block;
   max-width: 100%;
-  margin-bottom: 5px;
+  margin: 5px 0;
   color: #8493a8;
 }
 
@@ -63,7 +63,7 @@ input[type="checkbox"]:focus {
 
 
 // Common form controls
-.form-control {
+.control {
   display: block;
   width: 100%;
   height: $input-height-base;
@@ -88,15 +88,20 @@ input[type="checkbox"]:focus {
 }
 
 // Reset height for `textarea`s
-textarea.form-control {
+textarea.control {
   height: auto;
   resize: none;
 }
 
-select.form-control {
+select.control {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+
+  background: url("../images/icons/arrow-down.png") no-repeat center right 10px, $input-bg;
+  &:focus {
+    background: url("../images/icons/arrow-up.png") no-repeat center right 10px, $input-bg;
+  }
 }
 
 // Search inputs in iOS
@@ -118,7 +123,7 @@ input[type="search"] {
 
   label {
     padding-left: 36px;
-    margin-bottom: 0;
+    margin: 0;
     cursor: pointer;
     line-height: 1.6;
     
@@ -154,10 +159,10 @@ input[type="search"] {
 }
 
 .checkbox input[type="checkbox"]:checked + label:after {
-  background: url('../images/icons/icoCheck.png') center center no-repeat, $input-bg;
+  background: url('../images/icons/icon-checkbox.png') center center no-repeat, $input-bg;
 }
 .radio input[type="radio"]:checked + label:after {
-  background: url('../images/icons/icoRadio.png') center center no-repeat, $input-bg;
+  background: url('../images/icons/icon-radio.png') center center no-repeat, $input-bg;
 }
 
 
@@ -193,7 +198,7 @@ input[type="search"] {
       padding-left: 0;
       padding-right: 0;
     }
-    .form-control {
+    .control {
       position: relative;
       z-index: 2;
       float: left;
@@ -203,7 +208,7 @@ input[type="search"] {
   }
   .input-group--addon,
   .input-group--btn,
-  .input-group .form-control {
+  .input-group .control {
     display: table-cell;
 
     &:not(:first-child):not(:last-child) {
@@ -235,7 +240,7 @@ input[type="search"] {
   }
 
   // Reset rounded corners
-  .input-group .form-control:first-child,
+  .input-group .control:first-child,
   .input-group--addon:first-child,
   .input-group--btn:first-child > .btn,
   .input-group--btn:first-child > .btn-group > .btn,
@@ -245,7 +250,7 @@ input[type="search"] {
   .input-group--addon:first-child {
     border-right: 0;
   }
-  .input-group .form-control:last-child,
+  .input-group .control:last-child,
   .input-group--addon:last-child,
   .input-group--btn:last-child > .btn,
   .input-group--btn:last-child > .btn-group > .btn,
@@ -275,13 +280,13 @@ input[type="search"] {
     }
     &:first-child {
       > .btn,
-      > .btn__group {
+      > .btn-group {
         margin-right: -1px;
       }
     }
     &:last-child {
       > .btn,
-      > .btn__group {
+      > .btn-group {
         z-index: 2;
         margin-left: -1px;
       }

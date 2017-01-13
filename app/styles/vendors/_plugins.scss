@@ -47,29 +47,29 @@
 }
 .slick-prev {
   left: 40px;
-  &::before { background: url("../images/plugins/iconArrPr.png") center center no-repeat, transparent; }
+  &::before { background: url("../images/icons/iconArrPr.png") center center no-repeat, transparent; }
 }
 .slick-next {
   right: 40px;
-  &::before { background: url("../images/plugins/iconArrNext.png") center center no-repeat, transparent; }
+  &::before { background: url("../images/icons/iconArrNext.png") center center no-repeat, transparent; }
 }
 //slider
 
 //select
 .select2-container--default .select2-selection--single {
-  @extend .form-control;
+  @extend .control;
+  .select2-selection__arrow {
+    height: 100%;
+  }
+  .select2-selection__rendered {
+    padding: 0;
+  }
 }
 .select2-container {
   width: auto !important;
   display: block;
 }
-.select2-container--default .select2-selection--single .select2-selection__arrow {
-  height: 100%;
-}
 .select2-container--default .select2-results__option--highlighted[aria-selected] {
-  background: #8493a8;
-}
-.select2-container .select2-selection--single .select2-selection__rendered {
-  padding: 0;
+  background: $base-color-main;
 }
 //select

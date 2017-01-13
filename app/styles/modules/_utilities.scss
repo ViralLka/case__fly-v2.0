@@ -31,40 +31,40 @@ button.close {
 }
 
 
-.center-block {
+.centered-block {
   @include center-block;
 }
-.pull-right {
+.pulled-right {
   float: right;
 }
-.pull-left {
+.pulled-left {
   float: left;
 }
 
 @if $use-adaptive == true and $use-flexbox == false {
   @media screen and (min-width: $screen-sm-min) {
-    .pull__sm-left   { float: left; }
-    .pull__sm-right  { float: right; }
+    .pulled__sm-left   { float: left; }
+    .pulled__sm-right  { float: right; }
   }
   @media screen and (min-width: $screen-md-min) {
-    .pull__md-left   { float: left; }
-    .pull__md-right  { float: right; }
+    .pulled__md-left   { float: left; }
+    .pulled__md-right  { float: right; }
   }
   @media screen and (min-width: $screen-lg-min) {
-    .pull__lg-left   { float: left; }
-    .pull__lg-right  { float: right; }
+    .pulled__lg-left   { float: left; }
+    .pulled__lg-right  { float: right; }
   }
   @media screen and (min-width: $screen-xl-min) {
-    .pull__xl-left   { float: left; }
-    .pull__xl-right  { float: right; }
+    .pulled__xl-left   { float: left; }
+    .pulled__xl-right  { float: right; }
   }
 }
 
 .hide {
-  display: none !important;
+  display: none;
 }
 .show {
-  display: block !important;
+  display: block;
 }
 .invisible {
   visibility: hidden;

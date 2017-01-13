@@ -30,7 +30,7 @@
         line-height:0;
         text-align:center;
       }
-      // custom ornament <hr class="rule  rule--ornament" data-ornament="!">
+      // custom ornament <hr class="rule rule--ornament" data-ornament="!">
       &[data-ornament]:after {
         content:attr(data-ornament);
       }
