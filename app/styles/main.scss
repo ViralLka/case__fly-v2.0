@@ -61,8 +61,8 @@ $use-column-table:             true!default;
 $use-color-text:               true!default;
 
 //modules
-$use-accordion:                true!default;
-$use-breadcrumb:               true!default;
+$use-accordion:                false!default;
+$use-breadcrumb:               false!default;
 $use-pagination:               true!default;
 $use-pager:                    true!default;
 $use-space:                    true!default;
@@ -73,6 +73,7 @@ $use-media:                    true!default;
 // grids
 $use-adaptive:                 false!default;
 $use-flexbox:                  false!default;
+$use-bem:                      false!default;
 // plugins
 $use-animations:               false!default;
 $debug-mode:                   false!default;

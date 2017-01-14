@@ -6,16 +6,16 @@
 
   @mixin container() {
     margin: 0 auto;
-    padding-left: ($grid-gutter-width-sm / 2);
-    padding-right: ($grid-gutter-width-sm / 2);
+    padding-left: ($grid-gutter-width / 2);
+    padding-right: ($grid-gutter-width / 2);
     @if $use-adaptive == true {
       @media screen and (min-width: $screen-sm-min) {
         width: $container-sm;
       }
       @media screen and (min-width: $screen-md-min) {
         width: $container-md;
-        padding-left: ($grid-gutter-width / 2);
-        padding-right: ($grid-gutter-width / 2);
+        padding-left: ($grid-gutter-width-md / 2);
+        padding-right: ($grid-gutter-width-md / 2);
       }
       @media screen and (min-width: $screen-lg-min) {
         width: $container-lg;
@@ -31,34 +31,39 @@
   @mixin make-row($gutter: $grid-gutter-width) {
     display: flex;
     flex-wrap: wrap;
-    margin-left: ($grid-gutter-width-sm / -2);
-    margin-right: ($grid-gutter-width-sm / -2);
-    @media screen and (min-width: $screen-md-min) {
-      margin-left: ($grid-gutter-width / 2);
-      margin-right: ($grid-gutter-width / 2);
+    margin-left: ($grid-gutter-width / -2);
+    margin-right: ($grid-gutter-width / -2);
+
+    @if $use-adaptive == true {
+      @media screen and (min-width: $screen-md-min) {
+        margin-left: ($grid-gutter-width-md / 2);
+        margin-right: ($grid-gutter-width-md / 2);
+      }
     }
   }
 
   @mixin make-column($gutter: $grid-gutter-width) {
     box-sizing: border-box;
     word-wrap: break-word;
-    padding-left: ($grid-gutter-width-sm / -2);
-    padding-right: ($grid-gutter-width-sm / -2);
-    @media screen and (min-width: $screen-md-min) {
-      padding-left: ($grid-gutter-width / 2);
-      padding-right: ($grid-gutter-width / 2);
+    padding-left: ($grid-gutter-width / -2);
+    padding-right: ($grid-gutter-width / -2);
+    @if $use-adaptive == true {
+      @media screen and (min-width: $screen-md-min) {
+        padding-left: ($grid-gutter-width-md / 2);
+        padding-right: ($grid-gutter-width-md / 2);
+      }
     }
   }
 
-  @mixin float-grid-columns($class, $i: 1, $list: ".cell__#{$class}-#{$i}") {
+  @mixin float-grid-columns($class, $i: 1, $list: ".is-col__#{$class}-#{$i}") {
     @for $i from (1 + 1) through $grid-columns {
-      $list: "#{$list}, .cell__#{$class}-#{$i}";
+      $list: "#{$list}, .is-col__#{$class}-#{$i}";
     }
   }
 
   @mixin calc-grid-column($index, $class, $type) {
     @if ($type == width) and ($index > 0) {
-      .cell__#{$class}-#{$index} {
+      .is-col__#{$class}-#{$index} {
         width: percentage(($index / $grid-columns));
       }
     }
@@ -144,8 +149,8 @@
 
   @mixin container() {
     margin: 0 auto;
-    padding-left: ($grid-gutter-width-sm / 2);
-    padding-right: ($grid-gutter-width-sm / 2);
+    padding-left: ($grid-gutter-width / 2);
+    padding-right: ($grid-gutter-width / 2);
     @include clearfix;
     @if $use-adaptive == true {
       @media screen and (min-width: $screen-sm-min) {
@@ -153,8 +158,8 @@
       }
       @media screen and (min-width: $screen-md-min) {
         width: $container-md;
-        padding-left: ($grid-gutter-width / 2);
-        padding-right: ($grid-gutter-width / 2);
+        padding-left: ($grid-gutter-width-md / 2);
+        padding-right: ($grid-gutter-width-md / 2);
       }
       @media screen and (min-width: $screen-lg-min) {
         width: $container-lg;
@@ -168,35 +173,40 @@
   }
 
   @mixin make-row() {
-    margin-left: floor(($grid-gutter-width-sm / -2));
-    margin-right: floor(($grid-gutter-width-sm / -2));
+    margin-left: floor(($grid-gutter-width / -2));
+    margin-right: floor(($grid-gutter-width / -2));
     @include clearfix;
-    @media screen and (min-width: $screen-md-min) {
-      margin-left: floor(($grid-gutter-width / -2));
-      margin-right: floor(($grid-gutter-width / -2));
+    @if $use-adaptive == true {
+      @media screen and (min-width: $screen-md-min) {
+        margin-left: floor(($grid-gutter-width-md / -2));
+        margin-right: floor(($grid-gutter-width-md / -2));
+      }
     }
   }
 
   @mixin make-column() {
     float: left;
     min-height: 1px;
-    padding-left: ($grid-gutter-width-sm / 2);
-    padding-right: ($grid-gutter-width-sm / 2);
-    @media screen and (min-width: $screen-md-min) {
-      padding-left: ($grid-gutter-width / 2);
-      padding-right: ($grid-gutter-width / 2);
+    padding-left: ($grid-gutter-width / 2);
+    padding-right: ($grid-gutter-width / 2);
+
+    @if $use-adaptive == true {
+      @media screen and (min-width: $screen-md-min) {
+        padding-left: ($grid-gutter-width-md / 2);
+        padding-right: ($grid-gutter-width-md / 2);
+      }
     }
   }
 
-  @mixin float-grid-columns($class, $i: 1, $list: ".cell__#{$class}-#{$i}") {
+  @mixin float-grid-columns($class, $i: 1, $list: ".is-col__#{$class}-#{$i}") {
     @for $i from (1 + 1) through $grid-columns {
-      $list: "#{$list}, .cell__#{$class}-#{$i}";
+      $list: "#{$list}, .is-col__#{$class}-#{$i}";
     }
   }
 
   @mixin calc-grid-column($index, $class, $type) {
     @if ($type == width) and ($index > 0) {
-      .cell__#{$class}-#{$index} {
+      .is-col__#{$class}-#{$index} {
         width: percentage(($index / $grid-columns));
       }
     }
