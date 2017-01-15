@@ -43,8 +43,6 @@
   }
 
   @mixin make-column($gutter: $grid-gutter-width) {
-    box-sizing: border-box;
-    word-wrap: break-word;
     padding-left: ($grid-gutter-width / -2);
     padding-right: ($grid-gutter-width / -2);
     @if $use-adaptive == true {
