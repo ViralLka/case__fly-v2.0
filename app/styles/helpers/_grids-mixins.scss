@@ -36,15 +36,15 @@
 
     @if $use-adaptive == true {
       @media screen and (min-width: $screen-md-min) {
-        margin-left: ($grid-gutter-width-md / 2);
-        margin-right: ($grid-gutter-width-md / 2);
+        margin-left: ($grid-gutter-width-md / -2);
+        margin-right: ($grid-gutter-width-md / -2);
       }
     }
   }
 
   @mixin make-column($gutter: $grid-gutter-width) {
-    padding-left: ($grid-gutter-width / -2);
-    padding-right: ($grid-gutter-width / -2);
+    padding-left: ($grid-gutter-width / 2);
+    padding-right: ($grid-gutter-width / 2);
     @if $use-adaptive == true {
       @media screen and (min-width: $screen-md-min) {
         padding-left: ($grid-gutter-width-md / 2);

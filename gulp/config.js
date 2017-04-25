@@ -70,22 +70,22 @@ module.exports.browserSync = {
 module.exports.buildSize = {
   srcAll: dist + '/**/*',
   cfgAll: {
-    title: 'build', 
+    title: 'build',
     gzip: true
   },
   srcCss: path.join(dist, styles, '/**/*'),
   cfgCss: {
-    title: 'CSS', 
+    title: 'CSS',
     gzip: true
   },
   srcJs: path.join(dist, scripts, '/**/*'),
   cfgJs: {
-    title: 'JS', 
+    title: 'JS',
     gzip: true
   },
   srcImages: path.join(dist, images, '/**/*'),
   cfgImages: {
-    title: 'Images', 
+    title: 'Images',
     gzip: false
   }
 };
@@ -97,7 +97,7 @@ module.exports.clean = [tmp, dist];
 // Copy fonts task config
 module.exports.copyFonts = {
   src: [
-    // path.join(app, fonts, '**/*'), 'bower_components/*' // bower-fonts
+    path.join(app, fonts, '**/*'), 'bower_components/*' // bower-fonts
   ],
   dest: dist + '/fonts'
 };
@@ -138,7 +138,7 @@ module.exports.images = {
 // JSHint task config
 module.exports.eslint = {
   src: [
-    path.join(app, scripts,'**/*.js'), 
+    path.join(app, scripts,'**/*.js'),
     path.join('!' + app, scripts,'plugins/**/*.js') // do not lint external plugins
   ]
 };
@@ -153,7 +153,7 @@ module.exports.scripts = {
 module.exports.styles = {
   src: path.join(app, styles, '*.scss'),
   dest: path.join(tmp,styles),
-  sassCfg: {}, 
+  sassCfg: {},
   autoprefixerCfg: {browsers: ['> 0.01%', 'IE 9']}
 };
 
@@ -192,11 +192,11 @@ module.exports.watch = {
   sprites: path.join(app, sprites, '/*'),
   styles: path.join(app, styles, '/**/*.scss'),
   pug: [
-    path.join(app, views, '/**/*.pug'), 
+    path.join(app, views, '/**/*.pug'),
     path.join(app, views, data, '/**/*.json')
   ],
   scripts: path.join(app, scripts, '/**/*.js'),
-  wiredep: 'bower.json' 
+  wiredep: 'bower.json'
 };
 
 // Wiredep task config
@@ -217,5 +217,5 @@ module.exports.wiredep = {
       ignorePath: '../../',
       overides: {}
     }
-  } 
+  }
 };
