@@ -2,15 +2,16 @@
 // Vendors -> animations (http://www.justinaguilar.com/animations/)
 // ------------------------------------
 
-.fade {
-  opacity: 0;
-  @include transition(opacity .15s linear);
-  &.in {
-    opacity: 1;
-  }
-}
-
 @if $use-animations == true {
+
+  .fade {
+    opacity: 0;
+    @include transition(opacity .15s linear);
+    &.in {
+      opacity: 1;
+    }
+  }
+
   .slideDown {
     animation-name: slideDown;
     -webkit-animation-name: slideDown;

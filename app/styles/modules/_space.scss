@@ -22,9 +22,6 @@
   //
   $b: 0;
   @while $b < 101 {
-    .margright#{$b} {
-      @include margright(1px * $b);
-    }
     .margbot#{$b} {
       @include margbot(1px * $b);
     }

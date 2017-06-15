@@ -4,31 +4,31 @@
 
 @if $use-pager == true {
   .pager {
-    padding-left: 0;
+    padding: 0;
     margin: $line-height-computed 0;
     list-style: none;
     text-align: center;
     font-size: 15px;
     @include clearfix;
-    li {
-      display: inline;
-      > a,
-      > span {
-        display: inline-block;
-        text-decoration: none;
-        padding: 5px 14px;
-        height: 40px;
-        line-height: 28px;
-        &.arr {
-          width: 40px;
-          background-color: $pager-bg;
-          border: 1px solid $pager-border;
-          border-radius: $pager-border-radius;
-        }
-      }
+    &__item {
+      display: inline-block;
+    }
 
-      > a:hover,
-      > a:focus {
+    &__link,
+    span {
+      display: inline-block;
+      text-decoration: none;
+      padding: 5px 14px;
+      height: 40px;
+      line-height: 28px;
+      &.arr {
+        width: 40px;
+        background-color: $pager-bg;
+        border: 1px solid $pager-border;
+        border-radius: $pager-border-radius;
+      }
+      &:hover,
+      &:focus {
         text-decoration: none;
         color: $pager-hover-color;
         background-color: $pager-hover-bg;
@@ -37,15 +37,15 @@
     }
 
     .next {
-      > a,
-      > span {
+      a,
+      span {
         float: right;
       }
     }
 
     .previous {
-      > a,
-      > span {
+      a,
+      span {
         float: left;
       }
     }

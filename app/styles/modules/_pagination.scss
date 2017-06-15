@@ -13,37 +13,30 @@
     &__item {
       display: inline-block;
       text-transform: uppercase;
-      margin-left: -5px;
-      a,
-      span {
-        position: relative;
-        font-size: 15px;
-        float: left;
-        padding: 13px 20px;
-        line-height: $base-line-height;
-        text-decoration: none;
-        color: $pagination-color;
-        background-color: $pagination-bg;
-        border: 1px solid $pagination-border;
-        @include border-radius(5px);
-      }
       &:first-child {
-        a,
-        span {
+        a {
           margin-left: 0;
           @include border-left-radius($border-radius-base);
         }
       }
       &:last-child {
-        a,
-        span {
+        a {
           @include border-right-radius($border-radius-base);
         }
       }
     }
 
-    &__item a,
-    &__item span {
+    &__link {
+      position: relative;
+      font-size: 15px;
+      float: left;
+      padding: 13px 20px;
+      line-height: $base-line-height;
+      text-decoration: none;
+      color: $pagination-color;
+      background-color: $pagination-bg;
+      border: 1px solid $pagination-border;
+      @include border-radius(5px);
       &:hover,
       &:focus {
         z-index: 3;
@@ -53,8 +46,7 @@
       }
     }
 
-    &__item.active a,
-    &__item.active span {
+    &__item.active a {
       &,
       &:hover,
       &:focus {
