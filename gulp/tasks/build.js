@@ -37,11 +37,13 @@ gulp.task('build', 'Build project (use with --force to force build)', function()
   build.setBuild(true);
   runSequence(
     ['wiredep','clean'],
-    ['styles', 'scripts'],
+    ['styles-dist', 'scripts'],
     ['images', 'copy', 'extras'],
     'templates',
     'buildSize',
+    'minifyjs',
     'uncss',
+    'minifycss',
     function() {
       notifier.notify({
         title: 'Build',

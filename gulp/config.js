@@ -3,8 +3,8 @@ var path = require('path');
 var modRewrite = require('connect-modrewrite');
 
 // Default settings
-module.exports.uglifyJs = process.env.UGLIFYJS || false;
-module.exports.minifyCss = process.env.MINIFYCSS || false;
+module.exports.uglifyJs = process.env.UGLIFYJS || true;
+module.exports.minifyCss = process.env.MINIFYCSS || true;
 module.exports.cacheBust = process.env.CACHEBUST || false;
 module.exports.optimizeImages = process.env.OPTIMIZEIMAGES || true;
 module.exports.optimizeCss = process.env.OPTIMIZECSS || false;

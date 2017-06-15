@@ -20,18 +20,30 @@ var handleError = require('./../utils/handleError.js');
 
 // Complie scss using libsass
 
-gulp.task('styles', 'Compile Sass to CSS', function () {
+gulp.task('styles-serve', 'Compile Sass to CSS', function () {
   return gulp.src(config.styles.src)
     .pipe(sourcemaps.init())
-      .pipe(sassGlob())
+    .pipe(sassGlob())
     .pipe(sass(config.styles.sassCfg))
     .on('error', handleError)
     .pipe(postcss([
       autoprefixer(config.styles.autoprefixerCfg)
     ]))
-    .pipe(gcmq())
-    .pipe(gulpif(config.optimizeCss, csscomb()))
     .pipe(sourcemaps.write())
+    .pipe(gulp.dest(config.styles.dest))
+    .pipe(reload({stream:true}));
+});
+
+gulp.task('styles-dist', 'Compile Sass to CSS', function () {
+  return gulp.src(config.styles.src)
+    .pipe(sassGlob())
+    .pipe(sass(config.styles.sassCfg))
+    .on('error', handleError)
+    .pipe(postcss([
+      autoprefixer(config.styles.autoprefixerCfg)
+    ]))
+    .pipe(gulpif(config.optimizeCss, csscomb()))
+    .pipe(gcmq())
     .pipe(gulp.dest(config.styles.dest))
     .pipe(reload({stream:true}));
 });
