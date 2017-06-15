@@ -8,10 +8,7 @@
     "build": "gulp build",
     "serve": "gulp serve"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/SadDeploy/case__fly-v2.0.git"
-  },
+  "repository": "git+https://github.com/SadDeploy/case__fly-v2.0.git",
   "keywords": [
     "framework",
     "gulp",
@@ -71,5 +68,8 @@
   },
   "engines": {
     "node": ">=0.10.0"
+  },
+  "dependencies": {
+    "package.json": "^2.0.1"
   }
 }
