@@ -97,7 +97,7 @@ module.exports.clean = [tmp, dist];
 // Copy fonts task config
 module.exports.copyFonts = {
   src: [
-    path.join(app, fonts, '**/*'), 'bower_components/*' // bower-fonts
+    path.join(app, fonts, '**/*'), 'bower_components/**/*.{eot,svg,ttf,woff,woff2}' // bower-fonts
   ],
   dest: dist + '/fonts'
 };
