@@ -44,21 +44,9 @@ $sprite:   map-get($icons, sprite) !default;
 
   @return $attr;
 }
-/// Get the width of an icon in em
-/// @param {string} $icon - The name of the icon
-@function icon_width($icon) {
-  @return mq-px2em(sprite-attr($icon, width));
-}
-
-/// Get the height of an icon in em
-/// @param {string} $icon - The name of the icon
-@function icon_height($icon) {
-  @return mq-px2em(sprite-attr($icon, height));
-}
 
 /// Assign the correct SVG background image and dimensions to the element
 %sprite {
-  display: inline-block;
   background-image: url(map-get($sprite, svgPath));
   background-size: mq-px2em(map-get($sprite, width)) mq-px2em(map-get($sprite, height));
 }
@@ -79,7 +67,8 @@ $sprite:   map-get($icons, sprite) !default;
 
   // Outputs background position in em
   @if $type == all or $type == bg {
-    background-position: mq-px2em(map-get($iconMap, x) - 5) mq-px2em(map-get($iconMap, y) - 5);
+    // numbers must be the same as shape -> spacing -> padding in the gulp/tasks/svg.js
+    background-position: mq-px2em(map-get($iconMap, x) - 10) mq-px2em(map-get($iconMap, y) - 10);
   }
 
 }

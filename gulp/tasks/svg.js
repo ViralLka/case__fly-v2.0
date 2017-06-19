@@ -9,7 +9,7 @@ gulp.task('sprites', function () {
         .pipe(svgSprite({
             shape: {
                 spacing: {
-                    padding: 5
+                    padding: 10
                 }
             },
             mode: {
@@ -32,4 +32,3 @@ gulp.task('sprites', function () {
         }))
         .pipe(gulp.dest(config.sprites.dest));
 });
-

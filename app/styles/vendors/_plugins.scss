@@ -3,13 +3,21 @@
 // ------------------------------------
 
 //svg-icons
+$items:
+  facebook,
+  twitter, 
+  percent_icon
+;
 .is-icons {
   display: inline-block;
   &:before {
     content: '';
+    display: block;
   }
-  &--facebook {
-    &:before {@include sprite(facebook);}
+  @each $item in $items {
+    &--#{$item} {
+      &:before {@include sprite($item);}
+    }
   }
 }
 //svg-icons
