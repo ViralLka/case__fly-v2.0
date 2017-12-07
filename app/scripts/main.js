@@ -22,8 +22,7 @@ $(document).ready(function() {
     //$("[name=phone]").mask("+7 (999) 999-9999");
     // mask phone
 
-    // slider {slick-carousel}
-    //$('.slider').slick({});
+    // slider {http://idangero.us/swiper/}
     // slider
 
     // select {select2}
