@@ -1,27 +1,23 @@
 {
   "navigation" : {
     "Index": {
-      "title": "Index",
+      "title": "Главная",
       "href": "/",
       "subitems": false
     },
     "Catalog" : {
-      "title": "Catalog",
-      "href": "#",
-      "subitems": {
-        "Catalog item 1": {
-          "title" : "Catalog item 1",
-          "href" : "#"
-        },
-        "Catalog item 2": {
-          "title" : "Catalog item 2",
-          "href" : "#"
-        }
-      }
+      "title": "О компании",
+      "href": "about,html",
+      "subitems": false
     },
     "About" : {
-      "title": "About",
-      "href": "#",
+      "title": "Партнерам",
+      "href": "partners.html",
+      "subitems": false
+    },
+    "About1" : {
+      "title": "Обучение",
+      "href": "education.html",
       "subitems": false
     }
   }

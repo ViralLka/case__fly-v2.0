@@ -12,8 +12,8 @@ main.page-main
                 p Books are useless! I only ever read one book, "To Kill A Mockingbird," and it gave me absolutely no insight on how to kill mockingbirds!
             p Makes sound effects and laughs. Where was I? Oh yeah! Stay out of my booze. #[br] Weaseling out of things is important to learn. It's what separates us from the animals…except the weasel. Weaseling out of things is important to learn.
             p Some #[b text] continue....
-            .is-row
-                .is-col.is-col__xs-6
+            .row
+                .col.col__xs-6
                     h3 H3: Super Useful
                     p I hope this has taught you kids a lesson: kids never learn. Can't you people take the law into your own hands? I mean, we can't be policing the entire city:
                     ul.list--bullet
@@ -23,7 +23,7 @@ main.page-main
                         li That's the ONLY thing about being a slave.
                         li You don't know how to do any of those.
                     p Yes, except the Dave Matthews Band doesn't rock. There's one way and only one way to determine if an animal is intelligent. Dissect its brain! It's just like the story of the grasshopper and the octopus.
-                .is-col.is-col__xs-6
+                .col.col__xs-6
                     h4 H4: Light &amp; Dark Theme
                     p Guards! Bring me the forms I need to fill out to have her taken away! Leela, Bender, we're going grave robbing. Oh right. I forgot about the battle:
                     ol.list--number
@@ -115,14 +115,14 @@ main.page-main
                     p.text__sm Website  •  Twitter
             include ../components/_pager
             .section-btn
-                .is-row
-                    .is-col.is-col__sm-3
+                .row
+                    .col.col__sm-3
                         h5 Buttons
                         ul.list--unstyled
                             li: a.btn.btn--primary(href='#') Normal
                             li.margtop20: a.btn.btn--primary(href='#') Hover
                             li.margtop20: a.btn.btn--primary.active(href='#') Pressed
-                    .is-col.is-col__sm-9
+                    .col.col__sm-9
                         h5 Button Sizes & Variations
                         a.btn.btn--default.btn__xs(href='#') Tiny
                         a.btn.btn--default.btn__sm(href='#') Small
@@ -134,14 +134,14 @@ main.page-main
                             a.btn.btn--default.btn--round(href='#') Standard
                             a.btn.btn--default.btn--round.btn__lg(href='#') Large
             .section-forms
-                .is-row
-                    .is-col.is-col__sm-3
+                .row
+                    .col.col__sm-3
                         h5 Ghost Buttons
                         ul.list--unstyled
                             li: a.btn.btn--outlined(href='#') Normal
                             li.margtop20: a.btn.btn--outlined(href='#') Hover
                             li.margtop20: a.btn.btn--outlined.active(href='#') Pressed
-                    .is-col.is-col__sm-4
+                    .col.col__sm-4
                         h5 Inputs
                         .form__group
                             +fieldInput('text', 'name', 'name', '', 'Grade  Kit', 'Grade  Kit', false)
@@ -154,7 +154,7 @@ main.page-main
                                 option Dropdown Disabled
                         h5 Text Area
                         +fieldTextarea('text', 'text', '', 'Good news, everyone', 4, '', false)
-                    .is-col.is-col__sm-4
+                    .col.col__sm-4
                         h5 Checkboxes & Radio Buttons
                         .form__group
                             +fieldCheckbox('Checkbox', 'item1', false)

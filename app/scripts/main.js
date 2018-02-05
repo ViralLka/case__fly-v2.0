@@ -3,35 +3,61 @@
 // ready
 $(document).ready(function() {
 
-    // anchor
-    $(".anchor").on("click","a", function (event) {
-        event.preventDefault();
-        var id  = $(this).attr('href'),
-            top = $(id).offset().top;
-        $('body,html').animate({scrollTop: top + 40}, 1000);
-    });
-    // anchor
-
     // adaptive menu
     $('.main-nav__toggle--js').click(function () {
         $(this).next().slideToggle();
     });
-    // adaptive menu
-
-    // mask phone {maskedinput}
-    //$("[name=phone]").mask("+7 (999) 999-9999");
-    // mask phone
+    // adaptive menu 
 
     // slider {http://idangero.us/swiper/}
+    var mySwiper = new Swiper ('.swiper', {
+        effect: 'coverflow',
+        slidesPerView: 2,
+        grabCursor: true,
+        centeredSlides: true,
+        spaceBetween:90,
+        // slidesPerView: 'auto',
+        loop: true,
+        coverflowEffect: {
+            slideShadows : false
+        },
+        pagination: {
+            el: '.swiper-pagination',
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          }
+    })
     // slider
 
-    // select {select2}
-    //$('select').select2({});
-    // select
-
     // popup {magnific-popup}
-    //$('.image-gallery').magnificPopup({});
+    $('.popup-modal').magnificPopup({
+		type: 'inline'
+	});
+	$(document).on('click', '.popup-modal-dismiss', function (e) {
+		e.preventDefault();
+		$.magnificPopup.close();
+	});
     // popup
+
+    $('.number--js').appear(function() {
+        $('.number--js').each(function(){
+            var dataN = $(this).attr('data-number');
+            $(this).animate({ num: dataN}, {
+                duration: 2000,
+                step: function (num){
+                    this.innerHTML = (num).toFixed(1) + '%'
+                }
+            });
+        });
+    });
+
+    $('ul.tabs__caption').on('click', 'li:not(.active)', function() {
+        $(this)
+          .addClass('active').siblings().removeClass('active')
+          .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
+      });
 
 });
 // ready

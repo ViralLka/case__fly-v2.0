@@ -53,15 +53,15 @@
     }
   }
 
-  @mixin float-grid-columns($class, $i: 1, $list: ".is-col__#{$class}-#{$i}") {
+  @mixin float-grid-columns($class, $i: 1, $list: ".col__#{$class}-#{$i}") {
     @for $i from (1 + 1) through $grid-columns {
-      $list: "#{$list}, .is-col__#{$class}-#{$i}";
+      $list: "#{$list}, .col__#{$class}-#{$i}";
     }
   }
 
   @mixin calc-grid-column($index, $class, $type) {
     @if ($type == width) and ($index > 0) {
-      .is-col__#{$class}-#{$index} {
+      .col__#{$class}-#{$index} {
         width: percentage(($index / $grid-columns));
       }
     }
@@ -196,15 +196,15 @@
     }
   }
 
-  @mixin float-grid-columns($class, $i: 1, $list: ".is-col__#{$class}-#{$i}") {
+  @mixin float-grid-columns($class, $i: 1, $list: ".col__#{$class}-#{$i}") {
     @for $i from (1 + 1) through $grid-columns {
-      $list: "#{$list}, .is-col__#{$class}-#{$i}";
+      $list: "#{$list}, .col__#{$class}-#{$i}";
     }
   }
 
   @mixin calc-grid-column($index, $class, $type) {
     @if ($type == width) and ($index > 0) {
-      .is-col__#{$class}-#{$index} {
+      .col__#{$class}-#{$index} {
         width: percentage(($index / $grid-columns));
       }
     }

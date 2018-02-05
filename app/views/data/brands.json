@@ -1,0 +1,52 @@
+{
+  "brands" : {
+    "Index": {
+      "title": "Техника и аксессуары",
+      "src": "images/beeline.png",
+      "num": "16.1",
+      "hit": true
+    },
+    "Catalog" : {
+      "title": "Одежда и обувь",
+      "src": "images/lamoda.png",
+      "num": "3.13",
+      "hit": false
+    },
+    "About" : {
+      "title": "Путешествия",
+      "src": "images/booking.png",
+      "num": "2.7",
+      "hit": false
+    },
+    "About1" : {
+      "title": "Техника и аксессуары",
+      "src": "images/mvideo.png",
+      "num": "1.75",
+      "hit": false
+    },
+    "About3" : {
+      "title": "Путешествия",
+      "src": "images/aviasales.png",
+      "num": "0.91",
+      "hit": false
+    },
+    "About13" : {
+      "title": "Техника и аксессуары",
+      "src": "images/aliexpress.png",
+      "num": "4.2",
+      "hit": false
+    },
+    "Catalog2" : {
+      "title": "Одежда и обувь",
+      "src": "images/nike.png",
+      "num": "6.3",
+      "hit": false
+    },
+    "Catalog3" : {
+      "title": "Техника и аксессуары",
+      "src": "images/delivery.png",
+      "num": "5.0",
+      "hit": false
+    }
+  }
+}

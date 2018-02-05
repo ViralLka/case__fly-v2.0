@@ -4,11 +4,20 @@
 
 //svg-icons
 $items:
-  facebook,
-  twitter, 
-  percent_icon
+  e-payments,
+  mastercard,
+  ya-dengi,
+  qiwi,
+  visa,
+  prev,
+  next,
+  e-payments-b,
+  mastercard-b,
+  ya-dengi-b,
+  qiwi-b,
+  visa-b
 ;
-.is-icons {
+.icons {
   display: inline-block;
   &:before {
     content: '';
@@ -21,6 +30,37 @@ $items:
   }
 }
 //svg-icons
+
+.swiper {
+    overflow: hidden;
+    padding: 5% 0;
+    &-title {
+        display: none;
+        position: absolute;
+        top: 0;left: 0;right: 0;bottom: 0;
+        margin: auto;
+        text-align: center;
+        z-index: 9;
+        color: $white-lighten;
+        font-size: 110px;
+        text-shadow: 0 2px 32px rgba(0, 0, 0, 0.32);
+    }
+    &-slide {
+        position: relative;
+        &-active {
+            .swiper-title {
+                display: block;
+            }
+        }
+    }
+}
+
+.tabs__content {
+  display: none; /* по умолчанию прячем все блоки */
+}
+.tabs__content.active {
+  display: block; /* по умолчанию показываем нужный блок */
+}
 
 // slider
 .slick-slide {

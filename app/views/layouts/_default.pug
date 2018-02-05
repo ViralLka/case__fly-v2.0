@@ -1,7 +1,7 @@
 //- Custom Configuration
 block config
   - var baseUrl = '/'
-  -var adaptive = false // choose website type
+  -var adaptive = true // choose website type
   
 doctype html
 html(lang="en")
@@ -49,6 +49,8 @@ html(lang="en")
     // Styles
     //- build:css({.tmp,app}) styles/plugins.css -->
     <!--bower:css-->
+    <link rel="stylesheet" href="../bower_components/swiper/dist/css/swiper.css" />
+    <link rel="stylesheet" href="../bower_components/magnific-popup/dist/magnific-popup.css" />
     <!--endbower-->
     //- endbuild -->
     //- build:css({.tmp,app}) styles/main.css -->
@@ -80,7 +82,10 @@ html(lang="en")
       //- build:js(./app/) scripts/plugins.js -->
       <!--bower:js-->
       <script src="../bower_components/jquery/dist/jquery.js"></script>
+      <script src="../bower_components/swiper/dist/js/swiper.js"></script>
+      <script src="../bower_components/magnific-popup/dist/jquery.magnific-popup.js"></script>
       <!--endbower-->
+      script(src="scripts/plugins/jquery.appear.js")
       //- endbuild -->
       //- build:js(.tmp) scripts/main.js -->
       script(src="scripts/main.js")

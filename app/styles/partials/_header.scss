@@ -7,24 +7,26 @@
 // Header
 //
 .page-header {
-  border-bottom: 1px solid $base-color-darken;
-  @include clearfix();
-  &__logo {
-    float: left;
-    a {text-decoration: none;}
-    img {
-      vertical-align: middle;
-      max-width: 60px;
+    position: fixed;
+    left: 0;right: 0;top: 0;
+    padding: 1% 1.9%;
+    &-inner {
+        @include row-flex();
+        @include justify-content__xs(space-between);
+        @include align-items__xs(center);
     }
-    span {
-      vertical-align: middle;
-      margin-left: 10px;
+    &__logo {
+        a {text-decoration: none;}
     }
-  }
-}
-.main-nav {
-  margin-top: 8px;
-  float: right;
+    &__link {
+        opacity: 0;
+        @include transition();
+    }
+    &.fixed {
+        .page-header__link {
+            opacity: 1;
+        }
+    }
 }
 
 //
