@@ -2,8 +2,6 @@
   "name": "Case__fly",
   "private": true,
   "dependencies": {
-    "jquery": "^2.2.3",
-    "swiper": "Swiper#^4.1.0",
-    "magnific-popup": "^1.1.0"
+    "jquery": "^2.2.3"
   }
 }

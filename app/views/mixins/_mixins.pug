@@ -14,18 +14,7 @@ mixin menu(items)
                         each subitem in item.subitems
                             li.main-nav__item
                                 a.main-nav__link(href=subitem.href, title=subitem.title)= subitem.title
-mixin brands(items)
-    .brands-items
-        each item in items
-            .brands__item
-                - if(item.hit !== false)
-                    .brands__item-hit Топ
-                .brands__item-title= item.title
-                .brands__item-img
-                    img(src=item.src, alt=item.title)
-                .brands__item-footer
-                    .brands__item-name Кешбэк
-                    .brands__item-num.number--js(data-number=item.num)= item.num + '%'
+
 
 //- form-input
 mixin fieldInput(type, name, id, label, placeholder, data, required)

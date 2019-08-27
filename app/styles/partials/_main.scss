@@ -8,13 +8,21 @@
   }
 }
 
-.h-container {
-    @media screen and (min-width: $screen-adaptive-nav) {
-        min-height: 100vh;
-    }
+//
+// Main container
+//
+.page-main {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-.banner {
-    color: $white-lighten;
-    background-image: linear-gradient(to right, #fe6511 0%, #fe710e 48%, #fe7d0b 100%);
+
+//tempaltes
+.text-template {
+  padding: 20px 0;
 }
+.dark-template {
+  padding: 20px 0;
+  background-color: $base-color-darken;
+}
+//tempaltes

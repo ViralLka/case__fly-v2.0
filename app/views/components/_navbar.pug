@@ -1,11 +1,12 @@
-nav.nav
-    if adaptive == true
-        button.main-nav__toggle.main-nav__toggle--closed.main-nav__toggle--js
-            span.icon-bar &nbsp;
-            span.icon-bar &nbsp;
-            span.icon-bar &nbsp;
-            span.icon-bar &nbsp;
-        .main-nav__collapse
+.navbar
+    nav.nav
+        if adaptive == true
+            button.main-nav__toggle.main-nav__toggle--closed.main-nav__toggle--js
+                span.icon-bar &nbsp;
+                span.icon-bar &nbsp;
+                span.icon-bar &nbsp;
+                span.icon-bar &nbsp;
+            .main-nav__collapse
+                +menu(navigation)
+        else
             +menu(navigation)
-    else
-        +menu(navigation)

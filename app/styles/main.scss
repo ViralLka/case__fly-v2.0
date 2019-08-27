@@ -1,28 +1,4 @@
-@font-face {
-    font-family: 'PF_light';
-    src: url('../fonts/pfhighwaysanspro-light-webfont.eot');
-    src: url('../fonts/pfhighwaysanspro-light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/pfhighwaysanspro-light-webfont.woff2') format('woff2'),
-         url('../fonts/pfhighwaysanspro-light-webfont.woff') format('woff'),
-         url('../fonts/pfhighwaysanspro-light-webfont.ttf') format('truetype'),
-         url('../fonts/pfhighwaysanspro-light-webfont.svg#pf_highway_sans_prolight') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'PF_medium';
-    src: url('../fonts/pfhighwaysanspro-medium-webfont.eot');
-    src: url('../fonts/pfhighwaysanspro-medium-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/pfhighwaysanspro-medium-webfont.woff2') format('woff2'),
-         url('../fonts/pfhighwaysanspro-medium-webfont.woff') format('woff'),
-         url('../fonts/pfhighwaysanspro-medium-webfont.ttf') format('truetype'),
-         url('../fonts/pfhighwaysanspro-medium-webfont.svg#pf_highway_sans_promedium') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300&subset=latin,cyrillic);
 //
 //sass/
 ////
@@ -79,7 +55,7 @@ $use-btn-color:                true!default;
 $use-btn-size:                 true!default;
 $use-btn-group:                false!default;
 $use-input-group:              false!default;
-$use-table:                    false!default;
+$use-table:                    true!default;
 $use-color-table:              false!default;
 $use-column-table:             false!default;
 $use-color-text:               true!default;
@@ -87,17 +63,17 @@ $use-color-text:               true!default;
 //modules
 $use-accordion:                false!default;
 $use-breadcrumb:               false!default;
-$use-pagination:               false!default;
-$use-pager:                    false!default;
+$use-pagination:               true!default;
+$use-pager:                    true!default;
 $use-space:                    false!default;
 $use-split:                    false!default;
 $use-rules:                    false!default;
 $use-this-or-this:             false!default;
-$use-media:                    false!default;
+$use-media:                    true!default;
 // grids
-$use-adaptive:                 true!default;
+$use-adaptive:                 false!default;
 $use-flexbox:                  true!default;
-$use-bem:                      true!default;
+$use-bem:                      false!default;
 // plugins
 $use-animations:               false!default;
 $debug-mode:                   false!default;
